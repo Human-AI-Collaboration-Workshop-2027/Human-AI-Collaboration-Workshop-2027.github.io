@@ -239,19 +239,20 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
 @media (max-width: 600px) {
   body { font-size: 17px; line-height: 1.7; }
   .page, .header-inner { padding-right: 22px; padding-left: 22px; }
-  .page { --sticky-section-height: 61.7px; margin-top: -12px; padding-top: 0; padding-bottom: 48px; }
+  .page { --sticky-section-height: 61.7px; margin-top: 0; padding-top: 0; padding-bottom: 48px; }
   .workshop-header {
-    min-height: max(330px, 70vw);
+    min-height: calc(100vw * 640 / 1076.63);
     align-items: start;
-    padding: 12px 0 36px;
+    padding: 12px 0 24px;
     background-size: 100% 100%, contain;
     background-position: center, center top;
     background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-mobile-center, .4)) 0%, rgba(255, 255, 255, var(--header-wash-mobile-mid, .15)) 34%, rgba(255, 255, 255, 0) 68%), var(--header-art-mobile);
   }
   .header-inner { padding-right: 18px; padding-left: 18px; }
-  h1 { margin-bottom: 16px; font-size: clamp(28px, 8vw, 34px); letter-spacing: -1px; line-height: 1.16; }
-  h1 span + span { margin-top: 12px; }
+  h1 { margin-bottom: 8px; font-size: clamp(28px, 8vw, 34px); letter-spacing: -1px; line-height: 1.16; }
+  h1 span + span { margin-top: 8px; }
   .event-details { font-size: 16px; }
+  .event-details::before { display: none; }
   main > section + section { margin-top: 42px; }
   .subsection { margin-top: 28px; }
   .subsection-heading { font-size: 23px; }
