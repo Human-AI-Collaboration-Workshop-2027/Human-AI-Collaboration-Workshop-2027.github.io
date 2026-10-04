@@ -31,7 +31,7 @@ body {
 
 .workshop-header {
   --header-art: url("images/header.svg");
-  --header-art-mobile: url("images/header-mobile.svg?layout=full-header");
+  --header-art-mobile: url("images/header-mobile.svg?layout=uncropped");
   --header-image-size: cover;
   --header-wash-center: .08;
   --header-wash-mid: .02;
@@ -244,9 +244,9 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
     min-height: max(330px, 70vw);
     align-items: start;
     padding: 12px 0 36px;
-    background-size: 100% 100%, 100% 100%, cover;
-    background-position: center, center, center top;
-    background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-mobile-center, .4)) 0%, rgba(255, 255, 255, var(--header-wash-mobile-mid, .15)) 34%, rgba(255, 255, 255, 0) 68%), linear-gradient(to bottom, rgba(255, 255, 255, 0) 78%, #fff 100%), var(--header-art-mobile);
+    background-size: 100% 100%, contain;
+    background-position: center, center top;
+    background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-mobile-center, .4)) 0%, rgba(255, 255, 255, var(--header-wash-mobile-mid, .15)) 34%, rgba(255, 255, 255, 0) 68%), var(--header-art-mobile);
   }
   .header-inner { padding-right: 18px; padding-left: 18px; }
   h1 { margin-bottom: 16px; font-size: clamp(28px, 8vw, 34px); letter-spacing: -1px; line-height: 1.16; }
