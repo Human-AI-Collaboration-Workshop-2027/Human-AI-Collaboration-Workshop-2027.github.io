@@ -74,14 +74,11 @@ body {
 .workshop-header {
   --header-art: url("images/header.svg");
   --header-art-mobile: url("images/header-mobile.svg?layout=uncropped");
-  --boat-outlines: url("images/boat-outlines.svg");
   --header-image-size: cover;
   --header-wash-center: .5;
   --header-wash-mid: .22;
   --header-wash-mobile-center: .6;
   --header-wash-mobile-mid: .28;
-  position: relative;
-  isolation: isolate;
   background-color: #fff;
   background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-center)) 0%, rgba(255, 255, 255, var(--header-wash-mid)) 45%, rgba(255, 255, 255, 0) 85%), var(--header-art);
   background-repeat: no-repeat;
@@ -95,18 +92,6 @@ body {
   text-align: center;
 }
 
-.workshop-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  /* Keep the existing image and overall wash at the edges; skip only the text halos. */
-  background: inherit;
-  -webkit-mask: var(--boat-outlines) center / var(--header-image-size) no-repeat;
-  mask: var(--boat-outlines) center / var(--header-image-size) no-repeat;
-  mask-mode: alpha;
-  pointer-events: none;
-}
 
 h1 {
   margin: 0 0 28px;
@@ -121,12 +106,12 @@ h1 {
 h1 span { display: block; }
 h1 span + span { margin-top: 12px; }
 
-.workshop-header h1 { position: relative; }
+.workshop-header h1 { position: relative; isolation: isolate; }
 .workshop-header h1::before,
 .workshop-header .event-details::before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   inset: -36px -40px;
   background: radial-gradient(ellipse, rgba(255, 255, 255, .94) 0%, rgba(255, 255, 255, .76) 48%, rgba(255, 255, 255, 0) 78%);
   pointer-events: none;
@@ -134,6 +119,7 @@ h1 span + span { margin-top: 12px; }
 
 .event-details {
   position: relative;
+  isolation: isolate;
   margin: 0 auto;
   color: #000;
   font-family: Georgia, "Times New Roman", serif;
@@ -321,8 +307,6 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
   .content-area { margin-top: 0; padding-top: 0; padding-bottom: 48px; }
   .page { --sticky-section-height: 60.4px; }
   .workshop-header {
-    --boat-outlines: url("images/boat-outlines-mobile.svg");
-    --header-image-size: contain;
     min-height: calc(100vw * 640 / 1076.63);
     align-items: start;
     padding: 12px 0 24px;
@@ -330,7 +314,6 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
     background-position: center, center top;
     background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-mobile-center)) 0%, rgba(255, 255, 255, var(--header-wash-mobile-mid)) 45%, rgba(255, 255, 255, 0) 85%), var(--header-art-mobile);
   }
-  .workshop-header::after { -webkit-mask-position: center top; mask-position: center top; }
   .header-inner { padding-right: 18px; padding-left: 18px; }
   h1 { margin-bottom: 8px; font-size: clamp(28px, 8vw, 34px); letter-spacing: -1px; line-height: 1.16; }
   h1 span + span { margin-top: 8px; }
@@ -365,7 +348,7 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
   .section-toggle, .mobile-section-menu { display: none !important; }
   .section-heading.is-navigable > .section-title { display: inline; }
   .section-heading, .subsection-heading { position: static; }
-  .event-details::before, .workshop-header h1::before, .workshop-header::after { display: none; }
+  .event-details::before, .workshop-header h1::before { display: none; }
   .workshop-header { background: #fff; min-height: 0; color: #000; padding: 0 0 24px; }
   .workshop-header h1, .workshop-header .event-details { text-shadow: none; }
   .event-details { color: #000; }
