@@ -74,6 +74,7 @@ body {
 .workshop-header {
   --header-art: url("images/header.svg");
   --header-art-mobile: url("images/header-mobile.svg?layout=uncropped");
+  --whitening-mask: url("images/header-whitening-mask.svg");
   --header-image-size: cover;
   --header-wash-center: .5;
   --header-wash-mid: .22;
@@ -114,6 +115,14 @@ h1 span + span { margin-top: 12px; }
   z-index: -1;
   inset: -36px -40px;
   background: radial-gradient(ellipse, rgba(255, 255, 255, .94) 0%, rgba(255, 255, 255, .76) 48%, rgba(255, 255, 255, 0) 78%);
+  -webkit-mask-image: var(--active-whitening-mask, none);
+  mask-image: var(--active-whitening-mask, none);
+  -webkit-mask-size: var(--whitening-mask-width) var(--whitening-mask-height);
+  mask-size: var(--whitening-mask-width) var(--whitening-mask-height);
+  -webkit-mask-position: var(--whitening-mask-x) var(--whitening-mask-y);
+  mask-position: var(--whitening-mask-x) var(--whitening-mask-y);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   pointer-events: none;
 }
 
@@ -307,6 +316,7 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
   .content-area { margin-top: 0; padding-top: 0; padding-bottom: 48px; }
   .page { --sticky-section-height: 60.4px; }
   .workshop-header {
+    --whitening-mask: url("images/header-whitening-mask-mobile.svg");
     min-height: calc(100vw * 640 / 1076.63);
     align-items: start;
     padding: 12px 0 24px;
