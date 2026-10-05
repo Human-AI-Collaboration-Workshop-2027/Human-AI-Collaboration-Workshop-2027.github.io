@@ -100,7 +100,11 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--boat-outlines) center / var(--header-image-size) no-repeat;
+  /* Keep the existing image and overall wash at the edges; skip only the text halos. */
+  background: inherit;
+  -webkit-mask: var(--boat-outlines) center / var(--header-image-size) no-repeat;
+  mask: var(--boat-outlines) center / var(--header-image-size) no-repeat;
+  mask-mode: alpha;
   pointer-events: none;
 }
 
@@ -326,7 +330,7 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
     background-position: center, center top;
     background-image: radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, var(--header-wash-mobile-center)) 0%, rgba(255, 255, 255, var(--header-wash-mobile-mid)) 45%, rgba(255, 255, 255, 0) 85%), var(--header-art-mobile);
   }
-  .workshop-header::after { background-position: center top; }
+  .workshop-header::after { -webkit-mask-position: center top; mask-position: center top; }
   .header-inner { padding-right: 18px; padding-left: 18px; }
   h1 { margin-bottom: 8px; font-size: clamp(28px, 8vw, 34px); letter-spacing: -1px; line-height: 1.16; }
   h1 span + span { margin-top: 8px; }
