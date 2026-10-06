@@ -72,8 +72,8 @@ body {
 .page { min-width: 0; }
 
 .workshop-header {
-  --header-art: url("images/header.svg");
-  --header-art-mobile: url("images/header-mobile.svg?layout=uncropped");
+  --header-art: url("images/header.webp?images=web-optimized-v1");
+  --header-art-mobile: url("images/header-mobile.webp?layout=uncropped&images=web-optimized-v1");
   --whitening-mask: url("images/header-whitening-mask.svg");
   --header-image-size: cover;
   --header-wash-center: .5;
