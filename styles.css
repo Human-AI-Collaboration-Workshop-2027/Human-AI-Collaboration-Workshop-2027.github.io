@@ -72,9 +72,9 @@ body {
 .page { min-width: 0; }
 
 .workshop-header {
-  --header-art: url("images/header.webp?images=web-optimized-v1");
-  --header-art-mobile: url("images/header-mobile.webp?layout=uncropped&images=web-optimized-v1");
-  --whitening-mask: url("images/header-whitening-mask.svg");
+  --header-art: url("images/header.webp?images=web-optimized-v1&art=fine-lattice-v1");
+  --header-art-mobile: url("images/header-mobile.webp?layout=uncropped&images=web-optimized-v1&art=fine-lattice-v1");
+  --whitening-mask: url("images/header-whitening-mask.svg?art=fine-lattice-v1");
   --header-image-size: cover;
   --header-wash-center: .5;
   --header-wash-mid: .22;
@@ -317,7 +317,7 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
   .content-area { margin-top: 0; padding-top: 0; padding-bottom: 48px; }
   .page { --sticky-section-height: 60.4px; }
   .workshop-header {
-    --whitening-mask: url("images/header-whitening-mask-mobile.svg");
+    --whitening-mask: url("images/header-whitening-mask-mobile.svg?art=fine-lattice-v1");
     min-height: calc(100vw * 640 / 1076.63);
     align-items: start;
     padding: 12px 0 24px;
