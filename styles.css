@@ -270,7 +270,8 @@ th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant
 @media (max-width: 900px) {
   .page-layout { display: block; max-width: 840px; }
   .contents { position: static; max-height: none; overflow: visible; margin-bottom: 18px; }
-  .contents.is-enhanced { display: none; }
+  /* Hide the temporary contents list until enhancement succeeds or loading fails. */
+  .nav-pending .contents, .contents.is-enhanced { display: none; }
   .section-heading.is-navigable { padding: 0; }
   .section-heading.is-navigable > .section-title { display: none; }
   .section-toggle {
