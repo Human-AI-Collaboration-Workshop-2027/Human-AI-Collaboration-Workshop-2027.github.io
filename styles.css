@@ -267,6 +267,26 @@ th { background: #f2f2f2; color: #000; font-weight: 400; }
 tbody tr:nth-child(even) { background: #f8f8f8; }
 th:first-child, td:first-child { width: 190px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .dates-table th { width: 45%; white-space: normal; background: transparent; }
+.schedule-speaker { color: #000; text-decoration: none; }
+.schedule-speaker:hover, .schedule-speaker:focus-visible { text-decoration: underline; }
+.schedule-speaker-card {
+  position: fixed;
+  z-index: 1000;
+  width: 196px;
+  max-width: calc(100vw - 24px);
+  padding: 12px;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 14%);
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  pointer-events: none;
+}
+.schedule-speaker-card .portrait-frame { width: 152px; margin-bottom: 10px; }
+.schedule-speaker-card .card-name { margin: 0; font-size: 16px; line-height: 1.35; }
+.schedule-speaker-card .card-affiliation { margin: 4px 0 0; font-size: 13px; line-height: 1.35; }
 .guidelines { margin: 0; }
 .guidelines > div + div { margin-top: 25px; }
 .guidelines dt { margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
