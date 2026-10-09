@@ -231,11 +231,6 @@ li:last-child { margin-bottom: 0; }
   object-position: 50% 50%;
 }
 
-.portrait--sraavya {
-  transform: scale(1.7);
-  transform-origin: 34% 6%;
-}
-
 h3 {
   margin: 0 0 6px;
   font-family: Georgia, "Times New Roman", serif;
