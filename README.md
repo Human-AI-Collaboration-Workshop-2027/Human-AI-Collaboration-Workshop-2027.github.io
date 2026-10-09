@@ -2,7 +2,7 @@
 
 Website for the ICLR 2027 workshop proposal.
 
-https://preserve-and-amplify-human-agency.github.io/
+https://human-ai-collaboration-workshop-2027.github.io/
 
 The site uses plain HTML, CSS, and JavaScript, with no build step. Edit `index.html` for content, `styles.css` for layout, and `images/` for artwork and portraits. GitHub Pages publishes the `main` branch from the repository root.
 
