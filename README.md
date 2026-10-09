@@ -1,4 +1,4 @@
-# Preserve and Amplify Human Agency
+# Human-AI Collaboration in Open-Ended Domains
 
 Website for the ICLR 2027 workshop proposal.
 
